@@ -14,7 +14,13 @@ def get_teams(root_url):
     owl_teams = []
 
     for idx, val in enumerate(teams['data']):
-        owl_teams.append(OwlTeam(val['id'], val['name'], val['location'], val['players']))
+
+        player_handles = []
+        for index, value in enumerate(val['players']):
+            if 'handle' in value:
+                player_handles.append(value['handle'])
+
+        owl_teams.append(OwlTeam(id=val['id'], name=val['name'], location=val['location'], players=player_handles))
 
     return owl_teams
 

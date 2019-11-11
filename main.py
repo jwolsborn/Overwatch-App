@@ -1,11 +1,13 @@
 from api_call import *
 
 
-def main():
+def main(url):
 
-    url = "https://api.overwatchleague.com{}"
     teams = get_teams(url)
-    matches = get_matches(url)
+    #matches = get_matches(url)
+
+
 
 if __name__ == "__main__":
-    main()
+    api_url = "https://api.overwatchleague.com{}"
+    main(api_url)
