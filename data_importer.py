@@ -2,11 +2,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-engine = create_engine('postgresql+psycopg2:///owl', echo=True)
-Session = sessionmaker(bind=engine)
+def import_team_data(data):
 
-s = Session()
+    engine = create_engine('postgresql+psycopg2:///owl', echo=True)
+    session = sessionmaker(bind=engine)
+    s = session()
 
-s.add()
-s.commit()
-s.close()
+    for idx, val in enumerate(data):
+        s.add(val)
+
+    s.commit()
+    s.close()
