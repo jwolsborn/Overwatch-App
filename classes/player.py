@@ -20,7 +20,7 @@ class OwlPlayer(Base):
     avg_final_blow_per10m = Column(Integer)
 
     def __repr__(self):
-        return f"<Player(id={self.id},team_id={self.team_id},name={self.name},team={self.team}," \
+        return f"<Player(id={self.id},team_id={self.team_id},name={self.name},role={self.role}, team={self.team}," \
                f"avg_elim_per10m={self.avg_elim_per10m}, avg_death_per10m={self.avg_death_per10m}," \
                f"avg_herodmg_per10m={self.avg_herodmg_per10m}, avg_heals_per10m={self.avg_heals_per10m}," \
                f"avg_ult_per10m={self.avg_ult_per10m},avg_final_blow_per10m={self.avg_final_blow_per10m}"

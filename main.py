@@ -6,6 +6,9 @@ def main(url):
 
     teams = get_teams(url)
     import_data(teams)
+
+    players = get_players(url)
+    import_data(players)
     #matches = get_matches(url)
 
 

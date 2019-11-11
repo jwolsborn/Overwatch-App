@@ -10,7 +10,7 @@ def request(url):
 
 def get_teams(root_url):
 
-    url = f"{root_url}/v2/teams"
+    url = root_url.format("/v2/teams")
     teams = request(url)
     owl_teams = []
 
@@ -28,7 +28,7 @@ def get_teams(root_url):
 
 def get_players(root_url):
 
-    url = f"{root_url}/v2/players"
+    url = root_url.format("/stats/players")
     players = request(url)
     owl_players = []
 
@@ -45,7 +45,7 @@ def get_players(root_url):
 
 def get_matches(root_url):
 
-    url = f"{root_url}/matches"
+    url = root_url.format("/matches")
     matches = request(url)
     owl_matches = []
 
