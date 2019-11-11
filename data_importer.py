@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-def import_team_data(data):
+def import_data(data):
 
     engine = create_engine('postgresql+psycopg2:///owl', echo=True)
     session = sessionmaker(bind=engine)

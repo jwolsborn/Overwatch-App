@@ -14,9 +14,3 @@ class OwlTeam(Base):
 
     def __repr__(self):
         return f"<Team(id='{self.id}',name={self.name},location={self.location},players={self.players}"
-
-    '''def __init__(self, id, name, location, players):
-        self.id = id
-        self.name = name
-        self.home_location = location
-        self.players = players'''
