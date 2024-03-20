@@ -1,5 +1,5 @@
 requests
-black==19.10b0
+black==24.3.0
 pandas==0.25.3
 pre-commit==1.20.0
 pytest==5.2.2
